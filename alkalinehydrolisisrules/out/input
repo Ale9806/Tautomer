@@ -53,5 +53,5 @@ def include(fName, checkDup=True, putDup=True, skipDup=True):
 			print("End of code from '", fName, "'", sep="")
 mod.include = include
 # From command line arguments
-include("glucose4.py")
-# PYTHONPATH=::/usr/local/lib:/home/alejandro/Desktop/BMSIS/MOD_project/glucose
+include("glucose4_simple (copy).py")
+# PYTHONPATH=::/usr/local/lib:/home/alejandro/Desktop/BMSIS/MOD_project/glucose/alkalinehydrolisisrules

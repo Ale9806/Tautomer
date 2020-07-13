@@ -1,5 +1,5 @@
 Running VM ---------------------------------------------------------
-Executing code from 'glucose2.py'
+Executing code from 'glucose4.py'
 Executing code from '../hcn/rules/all.py'
 Executing code from 'common.py' ('../hcn/rules/common.py')
 End of code from 'common.py' ('../hcn/rules/common.py')
@@ -498,27 +498,32 @@ WARNING: No viable geometries for O with bonds S = 2.
 Repeat, limit = 1
   Round 1:
   Round 1: Result subset has 11 graphs.
+REACTION
+['C(C1C(C(C(C(O)O1)O)O)O)O'] reaction_0 ['O', 'C=C1C(C(C(C(O)O1)O)O)O']
+{ } < 'Alkene Addition Elimination, O, H' > { }
+['C(C1C(C(C(C(O)O1)O)O)O)O'] reaction_1 ['O', 'C1C(C(C(O)OC=1CO)O)O']
+{ } < 'Alkene Addition Elimination, O, H' > { }
+['C(C1C(C(C(C(O)O1)O)O)O)O'] reaction_2 ['O', 'C1(O)OC(CO)C(C(C=1)O)O']
+{ } < 'Alkene Addition Elimination, O, H' > { }
+['C(C1C(C(C(C(O)O1)O)O)O)O'] reaction_3 ['O', 'C1OC(CO)C(C(C=1O)O)O']
+{ } < 'Alkene Addition Elimination, O, H' > { }
+['C(C1C(C(C(C(O)O1)O)O)O)O'] reaction_4 ['O', 'C1C(C(CO)OC(C=1O)O)O']
+{ } < 'Alkene Addition Elimination, O, H' > { }
+['C(C1C(C(C(C(O)O1)O)O)O)O'] reaction_5 ['O', 'C1(C(C(CO)OC(C=1)O)O)O']
+{ } < 'Alkene Addition Elimination, O, H' > { }
+['C(C1C(C(C(C(O)O1)O)O)O)O'] reaction_6 ['O', 'C1(C(C(OC(C=1)CO)O)O)O']
+{ } < 'Alkene Addition Elimination, O, H' > { }
+['C(C1C(C(C(C(O)O1)O)O)O)O'] reaction_7 ['O', 'C1C(C(OC(C=1O)CO)O)O']
+{ } < 'Alkene Addition Elimination, O, H' > { }
+['C(C1C(C(C(C(O)O1)O)O)O)O'] reaction_8 ['C(O)=C(C(C(C(CO)O)O)O)O']
+{ } < 'Alkene Addition Elimination, O, C' > { }
+['C(C1C(C(C(C(O)O1)O)O)O)O'] reaction_9 ['C(C(C(C(O)O)O)O)(O)=CCO']
+{ } < 'Alkene Addition Elimination, O, C' > { }
+['C(C1C(C(C(C(O)O1)O)O)O)O'] reaction_10 ['C(O)=CC(C(C(C(O)O)O)O)O']
+{ } < 'Alkene Addition Elimination, O, C' > { }
+{'reaction_0': ['C(C1C(C(C(C(O)O1)O)O)O)O'], 'reaction_1': ['C(C1C(C(C(C(O)O1)O)O)O)O'], 'reaction_2': ['C(C1C(C(C(C(O)O1)O)O)O)O'], 'reaction_3': ['C(C1C(C(C(C(O)O1)O)O)O)O'], 'reaction_4': ['C(C1C(C(C(C(O)O1)O)O)O)O'], 'reaction_5': ['C(C1C(C(C(C(O)O1)O)O)O)O'], 'reaction_6': ['C(C1C(C(C(C(O)O1)O)O)O)O'], 'reaction_7': ['C(C1C(C(C(C(O)O1)O)O)O)O'], 'reaction_8': ['C(C1C(C(C(C(O)O1)O)O)O)O'], 'reaction_9': ['C(C1C(C(C(C(O)O1)O)O)O)O'], 'reaction_10': ['C(C1C(C(C(C(O)O1)O)O)O)O']}
+End of code from 'glucose4.py'
 
-MY OWN SUMMARY:
-TOTAL MOLECULES: 13
-INITIAL MOLECULES: 2
-MOLECULES GENERATED: 11 
-
-C(C1C(C(C(C(O)O1)O)O)O)O
-O
-C=C1C(C(C(C(O)O1)O)O)O
-C1C(C(C(O)OC=1CO)O)O
-C1(O)OC(CO)C(C(C=1)O)O
-C1OC(CO)C(C(C=1O)O)O
-C1C(C(CO)OC(C=1O)O)O
-C1(C(C(CO)OC(C=1)O)O)O
-C1(C(C(OC(C=1)CO)O)O)O
-C1C(C(OC(C=1O)CO)O)O
-C(O)=C(C(C(C(CO)O)O)O)O
-C(C(C(C(O)O)O)O)(O)=CCO
-C(O)=CC(C(C(C(O)O)O)O)O
-End of code from 'glucose2.py'
-
-real	0m0.893s
-user	0m0.838s
-sys	0m0.051s
+real	0m0.670s
+user	0m0.620s
+sys	0m0.035s

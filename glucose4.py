@@ -34,30 +34,45 @@ with dg.build() as b:
 	,ignoreRuleLabelTypes=True
         )
 
-# SAVE NETWORK
-#f = dg.dump()
-#print("DUBED FILE SAVED AS:", f)
 
-#pints network
-dg.print()
+print("REACTION")
 
-# A pesonalized summary for me
-print("\nMY OWN SUMMARY:")
-totalMolecules = dg.numVertices
-outMolecules = abs(initMolecules - totalMolecules)
+i= 0
+reactants = {}
+products = {}
+rules=[]
+for e in dg.edges: 
+    reactants["reaction_" + str(i)] = [v.graph.smiles for v in e.sources]
+    products["reaction_" + str(i)] =  [v.graph.smiles for v in e.targets]
+    print([v.graph.smiles for v in e.sources],"reaction_"+str(i),[v.graph.smiles for v in e.targets])
+    
+    d = Derivations()
+    d.rules = e.rules
+    rules.append(d)
+    print(d)
+    i+=1
 
-print("TOTAL MOLECULES:",totalMolecules)
-print("INITIAL MOLECULES:",initMolecules)
-print("MOLECULES GENERATED:",outMolecules,"\n")
+import pickle
+dbfile = open('reactants', 'ab') 
+pickle.dump(reactants, dbfile)
+dbfile.close() 
 
-#print molecules in a txt file 
-count = 0
-with open("out_mol.txt",'w') as w:
-    for v in dg.vertices:
-        count += 1
-        w.write('"')
-        w.write(v.graph.smiles)
-        w.write('"')
-        if count < totalMolecules:
-            w.write(",")
-        print(v.graph.smiles)
+dbfile = open('products', 'ab') 
+pickle.dump(products, dbfile)
+dbfile.close() 
+  
+  
+  
+print(reactants)
+
+
+
+
+   
+
+
+
+
+
+
+

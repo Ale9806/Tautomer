@@ -34,30 +34,29 @@ with dg.build() as b:
 	,ignoreRuleLabelTypes=True
         )
 
-# SAVE NETWORK
-#f = dg.dump()
-#print("DUBED FILE SAVED AS:", f)
 
-#pints network
-dg.print()
+print("REACTION")
+a=[]
+i= 0
+#for e in dg.edges:
+#    a.append([v.graph.smiles for v in e.sources])
+#    a.append("reaction_"+str(i))
+#    a.append([v.graph.smiles for v in e.targets])
+#    i+=1
+#print(a)
+rules=[]
+for e in dg.edges:
+    d = Derivations()
+    print([v.graph.smiles for v in e.sources],"reaction_"+str(i),[v.graph.smiles for v in e.targets])
+    d.rules = e.rules
+    rules.append(d)
+    print(d)
+    i+=1
+print()
+print(rules[1])
+   
 
-# A pesonalized summary for me
-print("\nMY OWN SUMMARY:")
-totalMolecules = dg.numVertices
-outMolecules = abs(initMolecules - totalMolecules)
 
-print("TOTAL MOLECULES:",totalMolecules)
-print("INITIAL MOLECULES:",initMolecules)
-print("MOLECULES GENERATED:",outMolecules,"\n")
 
-#print molecules in a txt file 
-count = 0
-with open("out_mol.txt",'w') as w:
-    for v in dg.vertices:
-        count += 1
-        w.write('"')
-        w.write(v.graph.smiles)
-        w.write('"')
-        if count < totalMolecules:
-            w.write(",")
-        print(v.graph.smiles)
+
+
