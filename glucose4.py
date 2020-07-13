@@ -30,7 +30,7 @@ def pred(derivation):
 with dg.build() as b:
     b.execute(
             addSubset(glucose, water)
-            >> rightPredicate[pred](repeat[1](inputRules))
+            >> rightPredicate[pred](repeat[3](inputRules))
 	,ignoreRuleLabelTypes=True
         )
 
